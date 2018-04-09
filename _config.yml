@@ -30,3 +30,4 @@ exclude:
   - 'postcss.*.js'
   - 'svg-sprite.config.json'
   - 'vendor'
+  - 'yarn-error.log'
