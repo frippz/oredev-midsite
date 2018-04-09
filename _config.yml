@@ -1,0 +1,32 @@
+# Site settings
+title: Øredev
+email: noreply@oredev.org
+baseurl: ''
+url: https://frippz.github.io
+permalink: pretty
+
+# Default page settings
+defaults:
+  -
+    scope:
+      path: ''
+    values:
+      author:
+
+# Server settings
+host: 0.0.0.0
+
+# Exclude
+exclude:
+  - 'node_modules'
+  - 'script'
+  - 'package.json'
+  - 'LICENSE.md'
+  - 'README.md'
+  - 'src'
+  - 'Gemfile'
+  - 'Gemfile.lock'
+  - 'yarn.lock'
+  - 'postcss.*.js'
+  - 'svg-sprite.config.json'
+  - 'vendor'

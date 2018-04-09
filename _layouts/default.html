@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+{% include head.html %}
+<body{% if page.custom_class %} class="{{ page.custom_class }}"{% endif %}>
+
+  {% include header.html %}
+
+  <main role="main" id="main-content">
+
+    <div class="landmark-content">
+
+      {{ content }}
+
+    </div>
+    <!-- /landmark-content -->
+
+  </main>
+  <!-- /main -->
+
+  {% include footer.html %}
+
+  {% include base.html %}
+  <script src="{{ base }}/dist/main.js" defer></script>
+</body>
+</html>

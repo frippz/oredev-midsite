@@ -1,0 +1,337 @@
+/**
+ * main.css
+ *
+ * @author Fredrik Frodlund
+ */
+
+@media screen {
+
+  /**
+   * Landmark content
+   */
+  .landmark-content {
+    margin: 0 auto;
+    max-width: 62em;
+    overflow: hidden;
+    padding: 1em;
+    position: relative;
+  }
+
+  [role="main"] .landmark-content {
+    max-width: 46em;
+  }
+
+  /**
+   * Header (banner)
+   */
+  [role="banner"] {
+    background-color: #fff;
+    padding: 0;
+  }
+
+  .main-title {
+    margin: 0;
+  }
+
+  .main-title svg {
+    margin-bottom: -0.2em;
+    width: 4em;
+  }
+
+  .main-title a {
+    text-decoration: none;
+  }
+
+  /**
+   * Navigation
+   */
+  [role="navigation"] {
+    margin-left: auto;
+  }
+
+  #main-nav {
+    list-style: none;
+    margin: 0;
+    padding: 0.25em 0;
+  }
+
+  #main-nav li {
+    display: inline;
+  }
+
+  #main-nav li + li {
+    padding-left: 0.25em;
+  }
+
+  #main-nav li + li::before {
+    content: "-";
+    padding-right: 0.5em;
+  }
+
+  #main-nav a {
+    font-weight: 600;
+    text-decoration: none;
+  }
+
+  #main-nav a:hover,
+  #main-nav a:focus,
+  #main-nav a:active {
+    text-decoration: underline;
+  }
+
+  /**
+   * Hero & year list
+   */
+  .main-message {
+    font-size: 3em;
+    font-weight: 300;
+    line-height: 1.125;
+    margin: 0.75em 0 0.25em;
+    text-align: center;
+  }
+
+  .year-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+
+  .year-list li {
+    display: inline;
+  }
+
+  .year-list li + li {
+    padding-left: 0.5em;
+  }
+
+  .year-list li + li::before {
+    content: "-";
+    padding-right: 0.5em;
+  }
+
+  .year-list a {
+    text-decoration: none;
+    font-size: 1.2em;
+  }
+
+  .year-list a:hover,
+  .year-list a:focus,
+  .year-list a:active {
+    text-decoration: underline;
+  }
+
+  .year-list a.current {
+    color: #2965c5;
+    font-weight: 600;
+  }
+
+  /**
+   * Newsletter form
+   */
+  .newsletter-form {
+    text-align: center;
+    margin-bottom: 3em;
+  }
+
+  .newsletter-form label {
+    font-size: 1.2em;
+  }
+
+  .newsletter-form-input {
+    display: flex;
+    max-width: 24em;
+    margin: 0.5em auto 0;
+  }
+
+  .newsletter-form-input [type="email"] {
+    flex: 1 1 auto;
+    border: 0;
+    border-radius: 0.25em 0 0 0.25em;
+    font: inherit;
+    padding: 0.25em 0.5em;
+    margin: 0;
+    background-color: #fff;
+  }
+
+  .newsletter-form-input [type="submit"] {
+    flex: 0 0 auto;
+    border-radius: 0 0.25em 0.25em 0;
+    margin: 0;
+    padding: 0.25em 0.5em;
+    text-transform: uppercase;
+    -webkit-appearance: none;
+  }
+
+  /**
+   * Teasers & media objects
+   */
+  .media-object * + * {
+    margin-top: 0.25em;
+  }
+
+  .media-object-heading {
+    font-size: 1.2em;
+    font-weight: 400;
+  }
+
+  /**
+   * Contentinfo
+   */
+  [role="contentinfo"] {
+    background: #333;
+    color: #fff;
+    padding: 2em 0;
+  }
+
+  [role="contentinfo"] h2 {
+    font-size: 1.2em;
+    font-weight: 400;
+  }
+
+  [role="contentinfo"] .landmark-content {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+  }
+
+  [role="contentinfo"] a,
+  [role="contentinfo"] a:visited {
+    color: currentcolor;
+    text-decoration: none;
+  }
+
+  [role="contentinfo"] a:hover,
+  [role="contentinfo"] a:focus,
+  [role="contentinfo"] a:active {
+    color: #efefef;
+  }
+
+  /* Partner logo */
+  .partner-logo svg {
+    margin-top: 0.5em;
+  }
+
+  /* Copyright */
+  .copyright {
+    display: block;
+    font-size: 0.75em;
+    margin-top: 3em;
+    width: 100%;
+  }
+
+  .copyright a {
+    text-decoration: underline;
+  }
+
+  /**
+   * Blockquotes
+   */
+  blockquote {
+    margin: 0 1em 1em;
+    padding-left: 0.75em;
+    border-left: 4px solid #eee;
+    color: #595959;
+  }
+
+  /**
+   * Eye candy & visual fluff
+   */
+  a {
+    transition: all 0.25s ease;
+  }
+
+  /**
+   * Inline SVG icons
+   */
+  .svg-icon {
+    display: inline-block;
+    fill: currentcolor;
+    height: 1.2em;
+    width: 1.2em;
+    vertical-align: -0.2em;
+  }
+
+}/* END @media screen */
+
+@media only screen {
+
+  /**
+   * Sticky footer
+   */
+  body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+
+  [role="main"] {
+    flex: 1 0 auto;
+  }
+
+}
+/* END @media only screen */
+
+@media only screen and (min-width: 32em) {
+
+  /**
+   * Teasers
+   */
+  .teasers {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  .teaser-item {
+    flex: 0 0 13.5em;
+    margin-top: 0;
+  }
+
+  .teaser-item + .teaser-item {
+    margin-left: 1.5em;
+  }
+
+  /**
+   * Contentinfo
+   */
+
+  /* Contact & partner info */
+  .partner-logo {
+    margin-top: 0;
+  }
+
+}
+/* END @media only screen and (min-width: 32em) */
+
+@media only screen and (min-width: 42em) {
+
+  /**
+   * Header (banner)
+   */
+  [role="banner"] .landmark-content {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1em;
+  }
+
+  /**
+   * Navigation
+   */
+  [role="navigation"] {
+    margin-top: 0;
+  }
+
+  /**
+   * Hero
+   */
+  .banner-hero {
+    flex-basis: 100%;
+    margin: 4em 0;
+  }
+
+}
+/* END @media only screen and (max-width: 28em) */

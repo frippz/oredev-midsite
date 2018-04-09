@@ -1,0 +1,44 @@
+{% include base.html %}
+<header role="banner">
+
+  <div class="landmark-content">
+
+    <h1 class="main-title">
+      <a href="{{ base }}/">
+        {% include logo.svg %}
+        <span class="offscreen">{{ site.title }}</span>
+      </a>
+    </h1>
+
+    <nav role="navigation">
+      <ul id="main-nav">
+        <li><a href="{{ base }}/">Home</a></li>
+        <li><a href="{{ base }}/partners/">Partners</a></li>
+        <li><a href="{{ base }}/videos/">Videos</a></li>
+        <li><a href="{{ base }}/2017/">2017 Conference</a></li>
+        <li><a href="{{ base }}/contact/">Contact</a></li>
+      </ul>
+    </nav>
+    <!-- /navigation -->
+
+    {% if page.is_home %}
+    <div class="banner-hero">
+
+      <p class="main-message">Øredev Developer Conference</p>
+
+      <ul class="year-list">
+        <li><a href="#">2013</a></li>
+        <li><a href="#">2014</a></li>
+        <li><a href="#">2015</a></li>
+        <li><a href="#">2016</a></li>
+        <li><a href="#" class="current">2017</a></li>
+      </ul>
+
+    </div>
+    <!-- /conference-history -->
+    {% endif %}
+
+  </div>
+
+</header>
+<!-- /banner -->
